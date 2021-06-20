@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <body class="d-flex h-100 text-center text-white bg-dark">
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h1 class="float-md-start mb-0">Twitter 144p</h1>
+      <main class="px-3">
+        <p class="lead">То самое место где можно поделиться своими мыслями</p>
+        
+      </main>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <span class="nav-link active" aria-current="page"><%= link_to "Главная", home_path %> </span>
+
+        <span class="nav-link active" aria-current="page"><%= link_to "Написать статью", new_post_path %></span>
+      </nav>
+    </div>
+  </header>
+
+
+
+
+
+
+
+  </body>
+
+
+
+    <%= yield %>
+  </body>
+</html>
