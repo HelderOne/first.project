@@ -1,5 +1,10 @@
-<h2><%= @post.title %> </h2>
-<p><%= @post.body%> </p>
-<hr>
-<%= link_to "Редактировать", edit_post_path(@post), :class => 'btn btn-warning' %>
-<%= link_to "Удалить пост", post_path(@post), method: :delete, data:{confirm: "Хотите удалить статью?"}, :class => 'btn btn-danger' %>
+
+<article class= "post-check">
+  <h1><%= @post.title %> </h1>
+  <%= @post.created_at.to_date.strftime("%d %B, %Y") %>
+  <h2><%= @post.body%> </h2>
+  <hr>
+  <%= link_to "Редактировать", edit_post_path(@post), :class => 'btn btn-outline-primary' %>
+  <%= link_to "Удалить пост", post_path(@post), method: :delete, data:{confirm: "Хотите удалить статью?"}, :class => 'btn btn-outline-primary' %>
+  <%= link_to 'Назад',:back, class: 'btn btn-outline-secondary'%>
+  <hr>

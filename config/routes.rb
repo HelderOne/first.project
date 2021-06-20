@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  root 'posts#index', as: 'home'
 
-  get 'reserve' => 'pages#reserve'
-  
-  resources :posts
+    root 'posts#index'
+
+    resources :posts
+
+    resources :tags, only: [:show]
+
+
+
 end
