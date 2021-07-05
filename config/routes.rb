@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
 
   devise_for :users
-    root 'posts#index'
+  root 'posts#home'
 
-    resources :posts
+  get 'about' => 'pages#about'
 
-    resources :tags, only: [:show]
-
+  resources :posts
+  resources :tags, only: [:show]
+  devise_scope :user do
+     get '/users/sign_out' => 'devise/sessions#destroy'
+  end
 end

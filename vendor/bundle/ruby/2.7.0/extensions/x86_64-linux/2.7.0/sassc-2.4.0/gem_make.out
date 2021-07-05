@@ -1,11 +1,11 @@
-current directory: /home/helder/project.push/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
-/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20210620-6791-e6kyu8.rb extconf.rb
+current directory: /home/helder/project2/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
+/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20210628-18320-om7kdp.rb extconf.rb
 creating Makefile
 
-current directory: /home/helder/project.push/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
+current directory: /home/helder/project2/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
 make "DESTDIR=" clean
 
-current directory: /home/helder/project.push/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
+current directory: /home/helder/project2/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
 make "DESTDIR="
 compiling ./libsass/src/memory/allocator.cpp
 compiling ./libsass/src/ast.cpp
@@ -75,6 +75,6 @@ compiling ./libsass/src/util_string.cpp
 compiling ./libsass/src/values.cpp
 linking shared-object sassc/libsass.so
 
-current directory: /home/helder/project.push/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
+current directory: /home/helder/project2/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 libsass.so ./.gem.20210620-6791-1s7492m/sassc
+/usr/bin/install -c -m 0755 libsass.so ./.gem.20210628-18320-jjkb7n/sassc

@@ -1,15 +1,18 @@
 <article class="post">
-   <section class= "post-head">
-     <h2><%= post.title %></h2>
-   </section>
-   <time>
-     <%= post.created_at.to_date.strftime("%d %B, %Y") %>
-   </time>
-   <%= link_to 'Изменить', edit_post_path(post) %>
-    <%= link_to 'Удалить', post_path(post), method: :delete, data: { confirm: 'Вы уверены?' } %>
-   <br>
-<%= link_to "Читать полностью" , post_path(post), :class => 'btn btn-outline-primary' %>
+  <section class= "post-head">
+   <h5><%= post.title %></h5>
+  </section>
 
-<%= raw post.tags.map(&:name).map{ |t| link_to t, tag_path(t), class: 'badge badge-primary'}.join(' ') %>
-     <br>
+  <time>
+   <%= post.created_at.to_date.strftime("%d %B, %Y") %>
+  </time>
+  
+    <br>
+    <section class= "post-summary clearfix">
+     <p><%= simple_format(post.summary) %></p>
+    </section>
+   <%= link_to "Читать полностью" , post_path(post), :class => 'btn btn-outline-primary' %>
+   <%= raw post.tags.map(&:name).map{ |t| link_to t, tag_path(t), class: 'badge badge-primary'}.join(' ') %>
+    <hr>
+  <br>
 </article>

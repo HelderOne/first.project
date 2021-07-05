@@ -1,5 +1,5 @@
-current directory: /home/helder/project.push/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.7/ext/nio4r
-/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20210620-6791-12arex4.rb extconf.rb
+current directory: /home/helder/project2/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.7/ext/nio4r
+/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20210628-18320-s55a0q.rb extconf.rb
 checking for unistd.h... yes
 checking for linux/aio_abi.h... yes
 checking for linux/io_uring.h... yes
@@ -11,10 +11,10 @@ checking for port_event_t in port.h... no
 checking for sys/resource.h... yes
 creating Makefile
 
-current directory: /home/helder/project.push/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.7/ext/nio4r
+current directory: /home/helder/project2/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.7/ext/nio4r
 make "DESTDIR=" clean
 
-current directory: /home/helder/project.push/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.7/ext/nio4r
+current directory: /home/helder/project2/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.7/ext/nio4r
 make "DESTDIR="
 compiling bytebuffer.c
 compiling monitor.c
@@ -56,6 +56,6 @@ selector.c:499:5: warning: ignoring return value of ‘write’, declared with a
       |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 linking shared-object nio4r_ext.so
 
-current directory: /home/helder/project.push/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.7/ext/nio4r
+current directory: /home/helder/project2/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.7/ext/nio4r
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20210620-6791-p34qoj
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20210628-18320-uwpp4k

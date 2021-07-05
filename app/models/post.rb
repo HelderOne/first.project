@@ -1,9 +1,10 @@
 class Post < ApplicationRecord
+  mount_uploader :image, ImageUploader
 
   has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings
 
-  def all_tags
+    def all_tags
       self.tags.map(&:name).join(', ')
     end
 

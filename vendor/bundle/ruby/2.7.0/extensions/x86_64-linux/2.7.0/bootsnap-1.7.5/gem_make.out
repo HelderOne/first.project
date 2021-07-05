@@ -1,15 +1,15 @@
-current directory: /home/helder/project.push/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
-/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20210620-6791-17bqyx0.rb extconf.rb
+current directory: /home/helder/project2/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
+/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20210628-18320-xfmwpc.rb extconf.rb
 creating Makefile
 
-current directory: /home/helder/project.push/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
+current directory: /home/helder/project2/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
 make "DESTDIR=" clean
 
-current directory: /home/helder/project.push/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
+current directory: /home/helder/project2/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
 make "DESTDIR="
 compiling bootsnap.c
 linking shared-object bootsnap/bootsnap.so
 
-current directory: /home/helder/project.push/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
+current directory: /home/helder/project2/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20210620-6791-pcyays/bootsnap
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20210628-18320-1tu8jbs/bootsnap

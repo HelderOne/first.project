@@ -1,14 +1,197 @@
-<h2>Log in</h2>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Рецензист</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <style type="text/css">
+
+.blog-header {
+ line-height: 1;
+ border-bottom: 1px solid #e5e5e5;
+}
+
+.blog-header-logo {
+ font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+ font-size: 2.25rem;
+}
+
+.blog-header-logo:hover {
+ text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+ font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+.display-4 {
+ font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+ .display-4 {
+   font-size: 3rem;
+ }
+}
+
+.nav-scroller {
+ position: relative;
+ z-index: 2;
+ height: 2.75rem;
+ overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ -ms-flex-wrap: nowrap;
+ flex-wrap: nowrap;
+ padding-bottom: 1rem;
+ margin-top: -1px;
+ overflow-x: auto;
+ text-align: center;
+ white-space: nowrap;
+ -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroller .nav-link {
+ padding-top: .75rem;
+ padding-bottom: .75rem;
+ font-size: .875rem;
+}
+
+.card-img-right {
+ height: 100%;
+ border-radius: 0 3px 3px 0;
+}
+
+.flex-auto {
+ -ms-flex: 0 0 auto;
+ -webkit-box-flex: 0;
+ flex: 0 0 auto;
+}
+
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+ .h-md-250 { height: 250px; }
+}
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+/*
+* Blog name and description
+*/
+.blog-title {
+ margin-bottom: 0;
+ font-size: 2rem;
+ font-weight: 400;
+}
+.blog-description {
+ font-size: 1.1rem;
+ color: #999;
+}
+
+@media (min-width: 40em) {
+ .blog-title {
+   font-size: 3.5rem;
+ }
+}
+
+/* Pagination */
+.blog-pagination {
+ margin-bottom: 4rem;
+}
+.blog-pagination > .btn {
+ border-radius: 2rem;
+}
+
+/*
+* Blog posts
+*/
+.blog-post {
+ margin-bottom: 4rem;
+}
+.blog-post-title {
+ margin-bottom: .25rem;
+ font-size: 2.5rem;
+}
+.blog-post-meta {
+ margin-bottom: 1.25rem;
+ color: #999;
+}
+
+/*
+* Footer
+*/
+.blog-footer {
+ padding: 2.5rem 0;
+ color: #999;
+ text-align: center;
+ background-color: #f9f9f9;
+ border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+ margin-bottom: 0;
+}
+.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      </style>
+
+  </head>
+
+  <body class="text-center">>
+
+<div class="container">
+  <header class="blog-header py-3">
+    <div class="navbar-expand-lg navbar-light bg-light border-bottom shadow-sm d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+
+      <nav class="navbar navbar-light my-0 mr-md-auto font-weight-normal">
+        <img src="https://image.flaticon.com/icons/png/512/43/43212.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <a class="navbar-brand" <%= link_to "Рецензист", root_path%></a>
+      </nav>
+
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark"<%= link_to "Все статьи", posts_path%></a>
+        <a class="p-2 text-dark"><%= link_to "About", about_path%></a>
+        <a class="p-2 text-dark"><%= link_to 'Вход', new_user_session_path, class: "btn btn-outline-primary" %></a>
+      </nav>
+
+</header>
+
+
+
+
+<h2>Войти в свой аккаунт</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",:class => "form-control" %>
+
   </div>
 
   <div class="field">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.password_field :password, autocomplete: "current-password",:class => "form-control" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
@@ -19,8 +202,11 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", :class => 'btn btn-primary' %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%= render "devise/shared/links"%>
+</div>
+  </body>
+    </html>
