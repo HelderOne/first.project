@@ -2,11 +2,11 @@
   <section class= "post-head">
    <h5><%= post.title %></h5>
   </section>
-
+   <p><%= post.user.username %></p>
   <time>
    <%= post.created_at.to_date.strftime("%d %B, %Y") %>
   </time>
-  
+
     <br>
     <section class= "post-summary clearfix">
      <p><%= simple_format(post.summary) %></p>
