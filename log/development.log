@@ -25767,3 +25767,60 @@ ActionView::Template::Error (undefined method `username' for nil:NilClass):
   
 app/views/posts/_post.html.erb:5
 app/views/posts/index.html.erb:175
+Started GET "/" for 127.0.0.1 at 2021-07-19 13:22:10 +0300
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/home.html.erb within layouts/application
+  [1m[36mUser Load (44.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/home.html.erb:163
+  Rendered include/main/_notification.html.erb (Duration: 2.1ms | Allocations: 224)
+  [1m[36mTag Load (44.1ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY name, taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered posts/home.html.erb within layouts/application (Duration: 167.2ms | Allocations: 15371)
+  Rendered layout layouts/application.html.erb (Duration: 173.1ms | Allocations: 16593)
+Completed 200 OK in 202ms (Views: 81.2ms | ActiveRecord: 100.9ms | Allocations: 20990)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-07-19 13:22:21 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:164
+  [1m[36mPost Load (41.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:175
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 13)
+  Rendered posts/index.html.erb within layouts/application (Duration: 52.3ms | Allocations: 3920)
+  Rendered layout layouts/application.html.erb (Duration: 53.7ms | Allocations: 4934)
+Completed 200 OK in 70ms (Views: 11.4ms | ActiveRecord: 42.8ms | Allocations: 10098)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-07-19 13:22:29 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:164
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:175
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 10)
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2067)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3054)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 1.8ms | Allocations: 3468)
+
+
+Started GET "/" for 127.0.0.1 at 2021-07-19 13:22:30 +0300
+Processing by PostsController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/home.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/home.html.erb:163
+  Rendered include/main/_notification.html.erb (Duration: 0.1ms | Allocations: 57)
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY name, taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered posts/home.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2282)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3269)
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 2.8ms | Allocations: 3656)
+
+
